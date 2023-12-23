@@ -16,10 +16,12 @@ $tertiary-color:#99E2D0;
 }
 
 
-@media screen and (min-width: 320px) {
+
    
     body {
-        margin: 0%;
+        margin: 10px;
+        width: 375px;  
+        
         
       }
     
@@ -29,33 +31,30 @@ $tertiary-color:#99E2D0;
         text-align: center;
         justify-content: center;
         align-items: center;
+        min-width: 375px;
         
     
-      & img {
+        .header__logo {
         width: 200px;
 
-        }
-    
-        & .form {
-            justify-content: center;
-            align-items: center;
-            text-align: center;
         }
       }
     
 
-    .header{
+    header span{
             width: 100%;
             padding-bottom: 10px;
             border-bottom: 1px solid  rgb(218, 211, 211);
             box-shadow:  1px 1px 1px 1px rgb(244, 232, 232);
     }
 
-    .localisation{
-         display:flex;
+    .form-group{
+        display: flex;
+ 
+    .form-group__localisation{
+        display: flex;
          flex-direction: row;
          width: 100%;
-         text-align: center;
          padding-top: 10px;
          padding-bottom: 10px;
          /*background-color: rgb(195, 190, 190);*/
@@ -67,6 +66,8 @@ $tertiary-color:#99E2D0;
            /* background-color:rgb(195, 190, 190); */
          }
     }
+    }
+
     #city .fa-location-dot{
         display: flex;
         flex-direction: row;
@@ -81,15 +82,37 @@ $tertiary-color:#99E2D0;
         color: black;
     }
 
- .btn{
+
+.btn-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   margin: 10px;
+
+   & h2{
+    text-align: left;
+    
+
+   }
+
+   .restaurant {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+ & .btn{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 40px;
-    width: 70%;
-    margin-left: 60px;
-    background-color:#e63ccc;
+    width: 250px;
+   /* background-color:  #dd3fce;*/
+   background:linear-gradient( #ee61ac ,  #dd3fce, #9f1aa1, );
+    opacity: 0.9;
     border-radius: 30px;
     margin-bottom: 10px;
     box-shadow:  3px 3px 3px 3px rgb(218, 211, 211);
@@ -102,8 +125,9 @@ $tertiary-color:#99E2D0;
         
     }
  }
+}
 
- .restaurant .nav{
+ .choice-1 .nav{
     display: flex;
     width: 100%;
     justify-content: center;
@@ -116,12 +140,144 @@ $tertiary-color:#99E2D0;
     box-shadow:  1px 1px 1px 1px rgb(244, 232, 232);
     border-radius: 15px;
     margin-bottom: 20px;
+    width: 200px;
 
  }
 
  main{
-    margin: 8px;
- }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .cards-menus__card a {
+        text-decoration: none;
+        color: black;
+        display: flex;
+        flex-direction: center;
+        align-items: left;
+        justify-content: left;
+        margin-left: 20px;
+        width: 110%;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        
+
+        
+      
+    
+
+     & .cards-menus__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 330px;
+        border-radius: 15px;
+        box-shadow:  1px 1px 1px 1px rgb(244, 232, 232);
+        margin-bottom: 0px;
+        margin-bottom: 20px;
+
+     }
+        
+     }
+
+     & .news{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #99E2D0;
+        color: #217a64;
+        border-radius: 3px;
+        position: relative;
+       /* bottom: 50px;*/
+        right: 100px;
+        width: 110px;
+        height: 30px;
+        margin-top: 10px;
+       
+     }
+
+     
+     & .btn-nav  i{
+        color: $primairy-color;
+        font-size: 20px;
+     }
+
+      & .cercle i {
+        display: flex;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 8px;
+        border-radius: 50%;
+        background-color: #e63ccc;
+        color: white;
+        background-color: $primairy-color;
+        font-size: 10px;
+        margin-bottom: 5px;
+     }
+
+     & .row{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+     }
+    }
+
+   
+
+      span .fa-heart{
+        display: none;
+      }
+      
+        div .fa-heart {
+            &:hover {
+              cursor: pointer;
+            span .fa-heart :active{
+                color:#cf79be;
+            }
+            }
+    }
+
+    
+
+
+     
+ 
+
+
+ .card-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    text-align: left;
+    font-size: 20px;
+    
+  
+
+
+     & .card-text {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: left;
+        align-items: left;
+        margin: 0%;
+        padding: 0%;
+    
+        }
+    }
+ 
+
 
  .main{
     display: flex;
@@ -133,7 +289,7 @@ $tertiary-color:#99E2D0;
 
  main img{
     width: 100%;
-   height: 120px;
+   height: 180px;
    object-fit: cover;
    border-radius: 15px 15px 0 0;
 
@@ -145,22 +301,48 @@ footer{
     text-align: left;
     color: white;
     padding: 10px;
+    display: flex;
+    flex-direction:column;
 
+& p{
+    margin: 5px;
+}
 
-    & div {
-        margin-left: 20px;
-        margin-top: 8px;
+    & a {
+        text-decoration: none;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        margin-left: 15px;
+
+        
+      
+    }
+
+    & i{
+ padding-right: 10px;
+ margin-top: 7px;
+ font-size:small;
     }
 
     & .logo{
         color: white;
         text-align: left;
-        margin-left: 0%;
-    }
-}
-
+        margin-bottom: 10px;
+        margin-left: 15px;
 
     }
+
+
+
+    }
+
+    
+
+
+
+    
 
 
 
