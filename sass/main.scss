@@ -1,0 +1,14 @@
+@use "./base/base"; //ajout du fichier _base.scss du dossier "base" au css final
+
+/*@use "./components/bouton";*/
+
+@use "./layout/footer";
+
+@use "./layout/form";
+
+@use "./pages/cards";
+
+
+
+
+//use deTOUT les fichier présent dans le sdossier, a l'exception du dossier utils
