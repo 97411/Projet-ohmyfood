@@ -1,14 +1,48 @@
 @use "./base/base"; //ajout du fichier _base.scss du dossier "base" au css final
 
-/*@use "./components/bouton";*/
+@use "./components/bouton";
+
+@use "./layout/header";
 
 @use "./layout/footer";
 
 @use "./layout/form";
 
-@use "./pages/cards";
+@use "./pages/accueil";
+
+@use "./pages/restaurant";
+
 
 
 
 
 //use deTOUT les fichier présent dans le sdossier, a l'exception du dossier utils
+/*:hover{
+    .menus {
+       width: 100%;
+       margin-bottom: 20px;
+       text-overflow: ellipsis;
+       white-space: nowrap;
+       overflow: hidden;
+
+
+
+     & p  {
+       width: 100%;
+       margin-top: 5px;
+       text-overflow: ellipsis;
+       white-space: nowrap;
+       overflow: hidden;
+      
+       }
+      
+   
+
+       @include breakpoint(small) {
+        /* text-overflow: clip;*/
+        /* white-space: nowrap;
+         overflow: visible;
+       }
+  }
+}*/
+

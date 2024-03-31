@@ -20,93 +20,27 @@
       @media (min-width: 1440px) { @content; }
     }
   }
+  
 
-  /*apprendre à faire le mixin du bouton*/
-
- /* @mixin btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    height: 40px;
-    padding-left: 25px;
-    padding-right: 25px;
-    /*width: 270px;*/
-    /*background: linear-gradient(#ee61ac, #dd3fce, #9f1aa1, );
-    opacity: 0.9;
-    border-radius: 30px;
-    margin-bottom: 10px;
-    box-shadow: 3px 3px 3px 3px rgb(218, 211, 211);
-
-
-
-    & .section-subtitle {
-        color: white;
-        padding: 0px;
-
-    }
-
-    & {
-        .section-subtitle:hover {
-            transform: translate(-1vh);
-        }
-    }
-
-    .section-subtitle {
-        transition: transform 800ms ease;
-    }
-
-
-        &:hover{
-            transform: scale(1.1);
-        }
-
-    &{
-        transition: transform 800ms ease;
-
-    }
-  }*/
-
-  /* faire un mixin footer*/
- /* @mixin footer {
-    background-color: black;
-    text-align: left;
-    color: white;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: auto;
-
-    & p {
-        margin: 5px;
-    }
-
-    & a {
-        text-decoration: none;
-        color: white;
-        display: flex;
-        flex-direction: row;
-        align-items: left;
-        margin-left: 15px;
-
-    }
-
+  @mixin icon-styles {
+    position: relative;
+    top: 20px;
+    left: 17px;
+  
     & i {
-        padding-right: 10px;
-        margin-top: 7px;
-        font-size: small;
+      position: absolute;
+      top: 20px;
+      right: 50px;
     }
-
-    & .logo {
-        color: white;
-        text-align: left;
-        justify-content: end;
-        margin-bottom: 10px;
-        margin-left: 15px;
-
-        
-
+  
+    & .fa-solid {
+      opacity: 0;
+  
+      &:hover {
+        opacity: 1;
+        @include gradient();
+        transition: all 0.3s;
+      }
     }
-}*/
+  }
+  

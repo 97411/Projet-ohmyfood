@@ -5,18 +5,24 @@
   footer {
     display: flex;
     flex-direction: column;
-    /* margin: auto;*/
     width: 100%;
-  
+    box-sizing: border-box;
     background-color: black;
     text-align: left;
     color: white;
-    /*padding-bottom: 10px;*/
     justify-content: center;
   
     & p {
+      width: 70%;
       color: white;
       margin: 5px;
+      box-sizing: border-box;
+
+      &.section-title {
+        color: white;
+        width: 80%;
+        margin-bottom: 10px;
+      }
     }
   
     & a {
@@ -25,8 +31,9 @@
       display: flex;
       flex-direction: row;
       align-items: left;
-      margin-left: 15px;
-      width: 100%;
+      padding-left: 10px;
+      width: 80%;
+      box-sizing: border-box;
     }
   
     & i {
@@ -36,14 +43,16 @@
       font-size: small;
     }
   
-    & .logo {
+    
+   /* &.section-title {
       color: white;
-      /* text-align: left;
-          justify-content: end;*/
+      width: 80%;
       margin-bottom: 10px;
-      margin-left: 15px;
-    }
+      
+      box-sizing: border-box;
+    }*/
   }
+  
   
 
     @include breakpoint(medium) {
@@ -52,7 +61,6 @@
         flex-direction: row-reverse;
         width: 100%;
         justify-content: right;
-        /* text-align: center;*/
         padding-top: 20px;
     
       
@@ -95,9 +103,7 @@
         /*  text-align: center;*/
         margin-top: 20px;
         /*padding-top: 40px;*/
-        width: 150px;
-      
-    
+       /* width: 150px;*/
   
 
   & i {
@@ -119,13 +125,14 @@
     flex-direction: row-reverse;
     width: 100%;
     justify-content: right;
+    
     /* text-align: center;*/
     padding-top: 20px;
 
     & .logo {
       text-align: center;
       justify-content: left;
-      margin-right: 10px;
+      margin-right: 50px;
       /*padding-left: 0px;*/
       margin-bottom: 20px;
 

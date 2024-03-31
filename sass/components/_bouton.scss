@@ -3,7 +3,7 @@
 
 
 
-& .btn {
+ .btn {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -27,7 +27,7 @@
       margin: 0%;
       padding: 0%;
     }
-    & .section-subtitle {
+    & .text-btn {
       color: white;
       padding: 0px;
 
@@ -43,12 +43,12 @@
     }
 
     & {
-      .section-subtitle:hover {
+      .text-btn:hover {
         transform: translate(-0.2vh);
       }
     }
 
-    .section-subtitle {
+    .text-btn{
       transition: transform 100ms ease;
     }
 
