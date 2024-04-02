@@ -37,7 +37,7 @@ a {
 }
 
 /**************Loader animation**************/
-.loader-container {
+/*.loader-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -57,13 +57,13 @@ a {
 }
 
 .loader {
-  border: 8px solid #f3f3f3; /* Light grey */
-  border-top: 8px solid #3498db; /* Blue */
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db; 
   border-radius: 50%;
   width: 50px;
   height: 50px;
   animation: spin 3s linear infinite, hideLoader 3s forwards; /* Animation de rotation et masquage après 10 secondes */
-}
+/*}
 
 @keyframes spin {
   0% {
@@ -83,7 +83,7 @@ a {
     opacity: 0;
     visibility: hidden;
   }
-}
+}*/
 
 /******************************* HEADER *****************************/
 

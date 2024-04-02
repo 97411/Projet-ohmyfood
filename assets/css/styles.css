@@ -33,7 +33,7 @@ a {
 }
 
 /**************Loader animation**************/
-.loader-container {
+/*.loader-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -53,13 +53,13 @@ a {
 }
 
 .loader {
-  border: 8px solid #f3f3f3; /* Light grey */
-  border-top: 8px solid #3498db; /* Blue */
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db; 
   border-radius: 50%;
   width: 50px;
   height: 50px;
   animation: spin 3s linear infinite, hideLoader 3s forwards; /* Animation de rotation et masquage après 10 secondes */
-}
+/*}
 
 @keyframes spin {
   0% {
@@ -69,6 +69,7 @@ a {
     transform: rotate(360deg);
   }
 }
+
 @keyframes hideLoader {
   0% {
     opacity: 1;
@@ -78,7 +79,7 @@ a {
     opacity: 0;
     visibility: hidden;
   }
-}
+}*/
 /******************************* HEADER *****************************/
 header {
   display: flex;
@@ -1131,7 +1132,10 @@ footer i {
   box-sizing: border-box;
 }
 .cards-menus h2 {
-  margin-left: 15px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  /*margin-left: 15px;*/
   /* padding-left: 30px;*/
 }
 .cards-menus a {
@@ -1279,9 +1283,10 @@ footer i {
     align-items: center;
     background-color: rgb(245, 241, 241);
     /*margin-left: 25px;*/
-  }
-  .cards-menus h2 {
-    margin-left: 55px;
+    /* & h2 {
+      padding-right: 145px;
+
+     }*/
   }
   .cards-menus a {
     text-decoration: none;
@@ -1382,6 +1387,53 @@ footer i {
     width: 80px;
     height: 30px;
     top: -140px;
+  }
+}
+/**************Loader animation**************/
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(247, 233, 233);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: hideLoader 5s forwards;
+  z-index: 1;
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 3s linear infinite, hideLoader 3s forwards; /* Animation de rotation et masquage après 10 secondes */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes hideLoader {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 /*******version portable de la page 1*******/

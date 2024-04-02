@@ -23,7 +23,10 @@
   box-sizing: border-box;
 
   & h2 {
-    margin-left: 15px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    /*margin-left: 15px;*/
    /* padding-left: 30px;*/
   }
 
@@ -183,10 +186,10 @@ a {
    background-color: rgb(245, 241, 241);
    /*margin-left: 25px;*/
   
-   & h2 {
-    margin-left: 55px;
+ /* & h2 {
+   padding-right: 145px;
    
-  }
+  }*/
 
 a {
 text-decoration: none;
