@@ -13,38 +13,3 @@
 @use "./pages/loader";
 
 @use "./pages/restaurant";
-
-
-
-
-
-//use deTOUT les fichier présent dans le sdossier, a l'exception du dossier utils
-/*:hover{
-    .menus {
-       width: 100%;
-       margin-bottom: 20px;
-       text-overflow: ellipsis;
-       white-space: nowrap;
-       overflow: hidden;
-
-
-
-     & p  {
-       width: 100%;
-       margin-top: 5px;
-       text-overflow: ellipsis;
-       white-space: nowrap;
-       overflow: hidden;
-      
-       }
-      
-   
-
-       @include breakpoint(small) {
-        /* text-overflow: clip;*/
-        /* white-space: nowrap;
-         overflow: visible;
-       }
-  }
-}*/
-

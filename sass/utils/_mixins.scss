@@ -1,46 +1,47 @@
 @use "./variables" as *;
 
+@mixin gradient() {
+  color: transparent;
+  background-image: linear-gradient($primairy-color, $secondary-color);
+  background-clip: text;
 
-@mixin gradient(){
-    color: transparent;
-    background-image: linear-gradient($primairy-color, $secondary-color);
-    background-clip: text;
-   
-    cursor: pointer;
+  cursor: pointer;
 }
 
 @mixin breakpoint($point) {
-    @if $point == small {
-      @media (min-width: 768px) { @content; }
+  @if $point == small {
+    @media (min-width: 768px) {
+      @content;
     }
-    @else if $point == medium {
-      @media (min-width:1024px) { @content; }
+  } @else if $point == medium {
+    @media (min-width: 1024px) {
+      @content;
     }
-    @else if $point == large {
-      @media (min-width: 1440px) { @content; }
+  } @else if $point == large {
+    @media (min-width: 1440px) {
+      @content;
     }
   }
-  
+}
 
-  @mixin icon-styles {
-    position: relative;
+@mixin icon-styles {
+  position: relative;
+  top: 20px;
+  left: 17px;
+
+  & i {
+    position: absolute;
     top: 20px;
-    left: 17px;
-  
-    & i {
-      position: absolute;
-      top: 20px;
-      right: 50px;
-    }
-  
-    & .fa-solid {
-      opacity: 0;
-  
-      &:hover {
-        opacity: 1;
-        @include gradient();
-        transition: all 0.3s;
-      }
+    right: 50px;
+  }
+
+  & .fa-solid {
+    opacity: 0;
+
+    &:hover {
+      opacity: 1;
+      @include gradient();
+      transition: all 0.3s;
     }
   }
-  
+}

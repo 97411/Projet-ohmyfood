@@ -1,123 +1,111 @@
 @use "../utils/variables" as *; // ajout des variables pour les utilisé dans ce fichier (le "as *" permet de ne pas donner d'alias")
 @use "../utils/mixins" as *;
 
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: black;
+  text-align: left;
+  color: white;
+  justify-content: center;
 
-  footer {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: black;
-    text-align: left;
+  & p {
+    width: 70%;
     color: white;
-    justify-content: center;
-  
-    & p {
-      width: 70%;
-      color: white;
-      margin: 5px;
-      box-sizing: border-box;
+    margin: 5px;
+    box-sizing: border-box;
 
-      &.section-title {
-        color: white;
-        width: 80%;
-        margin-bottom: 10px;
-      }
-    }
-  
-    & a {
+    &.section-title {
       color: white;
-      text-decoration: none;
-      display: flex;
-      flex-direction: row;
-      align-items: left;
-      padding-left: 10px;
       width: 80%;
-      box-sizing: border-box;
+      margin-bottom: 10px;
     }
-  
-    & i {
-      color: white;
-      padding-right: 10px;
-      margin-top: 7px;
-      font-size: small;
-    }
-  
-    
-   /* &.section-title {
+  }
+
+  & a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    padding-left: 10px;
+    width: 80%;
+    box-sizing: border-box;
+  }
+
+  & i {
+    color: white;
+    padding-right: 10px;
+    margin-top: 7px;
+    font-size: small;
+  }
+
+  /* &.section-title {
       color: white;
       width: 80%;
       margin-bottom: 10px;
       
       box-sizing: border-box;
     }*/
-  }
-  
-  
-
-    @include breakpoint(medium) {
-      footer {
-        display: flex;
-        flex-direction: row-reverse;
-        width: 100%;
-        justify-content: right;
-        padding-top: 20px;
-    
-      
-      & a {
-        font-size: 11px;
-        /*  text-align: center;*/
-        margin-top: 20px;
-        /*padding-top: 40px;*/
-        margin-left: 0px;
-        padding: 0px;
-        justify-content: right;
-        text-align: right;
-      }
-    
-  
-
-  & i {
-    padding-right: 10px;
-    margin-top: 7px;
-    font-size: small;
-    color: white;
-  }
 }
+
+@include breakpoint(medium) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: right;
+    padding-top: 20px;
+
+    & a {
+      font-size: 11px;
+      /*  text-align: center;*/
+      margin-top: 20px;
+      /*padding-top: 40px;*/
+      margin-left: 0px;
+      padding: 0px;
+      justify-content: right;
+      text-align: right;
     }
 
+    & i {
+      padding-right: 10px;
+      margin-top: 7px;
+      font-size: small;
+      color: white;
+    }
+  }
+}
 
-    @include breakpoint(large) {
-      footer {
-        display: flex;
-        flex-direction: row-reverse;
-        width: 100%;
-        justify-content: center;
-        /* text-align: center;*/
-        padding-top: 20px;
+@include breakpoint(large) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: center;
+    /* text-align: center;*/
+    padding-top: 20px;
     margin: 0%;
-        padding: 0%;
-      
-      & a {
-        font-size: 11px;
-        /*  text-align: center;*/
-        margin-top: 20px;
-        /*padding-top: 40px;*/
-       /* width: 150px;*/
-  
+    padding: 0%;
 
-  & i {
-    padding-right: 10px;
-    margin-top: 7px;
-    font-size: small;
-    color: white;
+    & a {
+      font-size: 11px;
+      /*  text-align: center;*/
+      margin-top: 20px;
+      /*padding-top: 40px;*/
+      /* width: 150px;*/
+
+      & i {
+        padding-right: 10px;
+        margin-top: 7px;
+        font-size: small;
+        color: white;
+      }
+    }
   }
 }
-}
-    }
-
- 
-
 
 @include breakpoint(small) {
   footer {
@@ -125,7 +113,7 @@
     flex-direction: row-reverse;
     width: 100%;
     justify-content: right;
-    
+
     /* text-align: center;*/
     padding-top: 20px;
 
@@ -151,33 +139,33 @@
       margin-right: 0px;
       justify-content: right;
       text-decoration: none;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    /* align-items: left;*/
-    margin-left: 15px;
-    font-size: 11px;
-        /*  text-align: center;*/
-        margin-top: 20px;
-        /*padding-top: 40px;*/
-        margin-left: 5px;
-        padding: 0px;
-        text-align: center;
-        margin-top: 10px;
-        align-items: center;
-        /*flex-direction: row-reverse;*/
+      color: white;
+      display: flex;
+      flex-direction: row;
+      /* align-items: left;*/
+      margin-left: 15px;
+      font-size: 11px;
+      /*  text-align: center;*/
+      margin-top: 20px;
+      /*padding-top: 40px;*/
+      margin-left: 5px;
+      padding: 0px;
+      text-align: center;
+      margin-top: 10px;
+      align-items: center;
+      /*flex-direction: row-reverse;*/
     }
 
-       & .contact{
-        display: flex;
+    & .contact {
+      display: flex;
 
-     flex-direction: row;
-      }
+      flex-direction: row;
+    }
 
-      & .general {
-        display: flex;
-        flex-direction: row;
-      }   
+    & .general {
+      display: flex;
+      flex-direction: row;
+    }
 
     & p {
       margin: 2px;
@@ -186,7 +174,6 @@
       /*width: 150px;*/
       width: 110px;
       /* padding-right: 0px;*/
-     
     }
 
     & .contact {
@@ -207,8 +194,6 @@
       font-size: 12px;
       color: white;
       padding-right: 3px;
-      
     }
   }
 }
-

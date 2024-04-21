@@ -1,4 +1,9 @@
 @use "../utils/mixins" as *;
+
+
+/***************cards de la page d'accueil***************/
+
+/*******version portable *******/
 .cards-menus__card {
   background-color: white;
   border-radius: 20px;
@@ -22,14 +27,16 @@
 
   box-sizing: border-box;
 
-  & h2 {
+  & h2  {
     justify-content: center;
     text-align: center;
     align-items: center;
+    & .section-subtitle{
+    font-weight: bold;
     /*margin-left: 15px;*/
    /* padding-left: 30px;*/
   }
-
+  }
   a {
     text-decoration: none;
     color: #000000;
@@ -87,7 +94,7 @@
 }
 
 
-
+/*******version tablette*******/
 @include breakpoint(small) {
  
      .cards-menus {
@@ -171,6 +178,7 @@ a {
 }
 }
 
+/*******version desktop *******/
 @include breakpoint(medium) {
  
   .cards-menus {
@@ -240,6 +248,7 @@ flex-direction: row;
 }
 }
 
+/*******version desktop *******/
 @include breakpoint(large) {
  
   .cards-menus {
@@ -255,10 +264,7 @@ flex-direction: row;
    background-color: rgb(245, 241, 241);
    /*margin-left: 25px;*/
   
-   & h2 {
-   /* margin-left: 105px;*/
-   padding-left: 90px;
-  }
+  
 
 a {
 text-decoration: none;

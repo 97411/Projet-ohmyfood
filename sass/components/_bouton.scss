@@ -1,66 +1,52 @@
 @use "../utils/variables" as *; // ajout des variables pour les utilisé dans ce fichier (le "as *" permet de ne pas donner d'alias")
 @use "../utils/mixins" as *;
 
+/*****************Bouton*****************/
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 40%;
+  height: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+  /*width: 270px;*/
+  background: linear-gradient(#ff79da, #9356dc 75%);
+  opacity: 0.8;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px 3px 3px rgb(218, 211, 211);
 
+  & a {
+    text-decoration: none;
+    width: 100%;
+    height: auto;
+    margin: 0%;
+    padding: 0%;
+  }
+  & .text-btn {
+    color: white;
+    padding: 0px;
+  }
 
- .btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    width: 40%;
-    height: 40px;
-    padding-left: 25px;
-    padding-right: 25px;
-    /*width: 270px;*/
-    background: linear-gradient(#ee61ac, #ca36bb, #9e19a0);
-    opacity: 0.8;
-    border-radius: 30px;
-    margin-bottom: 10px;
-    box-shadow: 3px 3px 3px 3px rgb(218, 211, 211);
-
-    & a {
-      text-decoration: none;
-      width: 100%;
-      height: auto;
-      margin: 0%;
-      padding: 0%;
-    }
-    & .text-btn {
-      color: white;
-      padding: 0px;
-
-      /*  @include breakpoint(small){
-                margin-left: 25px;
-                font-size: large;
-                width: 80%;
-    
-            }
-            @include breakpoint(large){
-        
-            }*/
-    }
-
-    & {
-      .text-btn:hover {
-        transform: translate(-0.2vh);
-      }
-    }
-
-    .text-btn{
-      transition: transform 100ms ease;
-    }
-
-    &:hover {
-      background: linear-gradient(#ee61ac, #ca36bb, #9e19a0);
-      opacity: 0.6;
-
-      /* @include gradient($primairy-color, $secondary-color);
-            transition: all 0.9s;*/
-    }
-
-    & {
-      transition: transform 200ms ease;
+  & {
+    .text-btn:hover {
+      transform: translate(-0.2vh);
     }
   }
+
+  .text-btn {
+    transition: transform 100ms ease;
+  }
+
+  &:hover {
+    background: linear-gradient(#ff79da, #9356dc 75%);
+    opacity: 0.6;
+  }
+
+  & {
+    transition: transform 200ms ease;
+  }
+}

@@ -1,9 +1,7 @@
 @use "../utils/variables" as *; // ajout des variables pour les utilisé dans ce fichier (le "as *" permet de ne pas donner d'alias")
 @use "../utils/mixins" as *;
-  .header__logo {
-    width: 200px;
-    display: flex;
-    transition: 2s;
-  }
-
-  
+.header__logo {
+  width: 200px;
+  display: flex;
+  transition: 2s;
+}
