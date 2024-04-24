@@ -1,5 +1,5 @@
 @charset "UTF-8";
-h1 .section-subtitle, p, .card-title, h3 {
+.section-subtitle, p, .card-title, h3 {
   font-family: "Roboto", sans-serif;
   width: 100%;
   color: black;
@@ -242,7 +242,7 @@ main {
   }
 }
 @media (min-width: 768px) {
-  .fonction .choice-fonction .row .cercle {
+  m .fonction .choice-fonction .row .cercle {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -254,7 +254,7 @@ main {
     margin: auto;
   }
   .fonction .choice-fonction .row .nav {
-    font-size: 13px;
+    font-size: 12px;
     width: 100%;
     text-align: center;
   }
@@ -367,24 +367,13 @@ footer {
       box-sizing: border-box;
     }*/
 }
-footer p {
-  width: 70%;
-  color: white;
-  margin: 5px;
-  box-sizing: border-box;
-}
-footer p.section-title {
-  color: white;
-  width: 80%;
-  margin-bottom: 10px;
-}
 footer a {
   color: white;
   text-decoration: none;
   display: flex;
   flex-direction: row;
   padding-left: 10px;
-  width: 80%;
+  width: 100%;
   box-sizing: border-box;
 }
 footer i {
@@ -392,6 +381,17 @@ footer i {
   padding-right: 10px;
   margin-top: 7px;
   font-size: small;
+}
+footer p {
+  width: 100%;
+  color: white;
+  margin: 5px;
+  box-sizing: border-box;
+}
+footer p.section-title {
+  color: white;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 1024px) {
@@ -403,7 +403,9 @@ footer i {
     padding-top: 20px;
   }
   footer a {
-    font-size: 11px;
+    display: flex;
+    width: 100%;
+    font-size: 10px;
     /*  text-align: center;*/
     margin-top: 20px;
     /*padding-top: 40px;*/
@@ -411,6 +413,9 @@ footer i {
     padding: 0px;
     justify-content: right;
     text-align: right;
+  }
+  footer p {
+    width: 100%;
   }
   footer i {
     padding-right: 10px;
@@ -498,11 +503,11 @@ footer i {
     flex-direction: row;
   }
   footer p {
-    margin: 2px;
+    /*margin: 2px;*/
     color: white;
-    font-size: 12px;
+    font-size: 11px;
     /*width: 150px;*/
-    width: 110px;
+    width: 115px;
     /* padding-right: 0px;*/
   }
   footer .contact {

@@ -1,7 +1,7 @@
 @use "../utils/variables" as *; // ajout des variables pour les utilisé dans ce fichier (le "as *" permet de ne pas donner d'alias")
 @use "../utils/mixins" as *;
 
-h1 .section-subtitle, p, .card-title, h3 {
+ .section-subtitle, p, .card-title, h3 {
   font-family: "Roboto", sans-serif;
   width: 100%;
   color: black;
@@ -250,7 +250,7 @@ main {
 
         @include breakpoint(large) {
         }
-
+m
         & .cercle {
           display: flex;
           flex-direction: row;
@@ -265,7 +265,7 @@ main {
         }
 
         & .nav {
-          font-size: 13px;
+          font-size: 12px;
           width: 100%;
           text-align: center;
 
