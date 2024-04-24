@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.section-subtitle, p, .card-title, h3 {
+h1 .section-subtitle, p, .card-title, h3 {
   font-family: "Roboto", sans-serif;
   width: 100%;
   color: black;
@@ -337,10 +337,7 @@ main {
   transition: transform 100ms ease;
 }
 .btn:hover {
-  color: transparent;
-  background-image: linear-gradient(#9356dc, #ff79da);
-  background-clip: text;
-  cursor: pointer;
+  background: linear-gradient(#ff79da, #9356dc 75%);
   opacity: 0.6;
 }
 .btn {

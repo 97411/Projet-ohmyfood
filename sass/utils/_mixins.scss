@@ -1,6 +1,5 @@
 @use "./variables" as *;
 
-
 @mixin gradient() {
   color: transparent;
   background-image: linear-gradient($primairy-color, $secondary-color);
