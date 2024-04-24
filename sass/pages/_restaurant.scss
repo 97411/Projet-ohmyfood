@@ -14,6 +14,7 @@
     box-sizing: border-box;
     margin-left: 0;
     overflow-x: hidden;
+    /*visibility: hidden;*/
   
     & .fa-arrow-left-long {
       font-size: 20px;
@@ -90,15 +91,16 @@
         padding-top: 20px;
         background-color: rgb(248, 244, 244);
         border-radius: 25px 25px 0 0;
-        position: relative;
         bottom: 20px;
         width: 100%;
         margin: 0%;
         padding-bottom: 30px;
         box-sizing: border-box;
         @include breakpoint(small) {
-          width: 90%;
-         
+          width: 100%;
+          z-index: 1;
+          
+        
         
         }
   
@@ -110,18 +112,7 @@
           width: 60%;
           margin-left: 85px;
         }
-  
-        & :hover {
-          span{
-            transform: translate(-15px);
-          }
-          .check {
-            visibility: visible;
-            transform: translate(-15px);
-      
-          }
-        }
-
+        
         
   
         & .section-subtitle {
@@ -163,10 +154,14 @@
           margin-left: 10px;
           font-size: 13px;
           z-index: 1;
+          overflow: hidden;
+          box-sizing: border-box;
+         
   
           @include breakpoint(small) {
             width: 70%;
             margin-left: 90px;
+            
           }
           @include breakpoint(medium) {
             width: 70%;
@@ -177,7 +172,30 @@
             margin-left: 15px;
           }
 
+         
+          }
+
+          
+          
+                           
+          & :hover {
+             .check{
+              transform: scaleX(0);
+              visibility: visible;
+            }
+            .check {
+            transform: scaleX(1);
+              visibility: visible;
+              
+        
+            }
+          
+            
+
         }
+
+       
+        
 
         
          .menus {
@@ -186,20 +204,35 @@
             height: 50px;
             text-overflow: ellipsis;
             white-space: nowrap;
-            
-        
             padding-left: 10px;
             & p  {
-                width: 90%;
+               width: 200px;
                 margin-top: 3px;
                 margin-bottom: 0px;
                 font-size: small;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                
-               
-              
             }
+                &  h3{
+                  font-size: 16px;
+                  width: 200px;
+          
+                }
+                
+                & h3 {
+                  margin-bottom: 0%;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  overflow: hidden;
+            
+                  @include breakpoint(small) {
+                   /* text-overflow: clip;*/
+                    white-space: nowrap;
+                    overflow: visible;
+                  }
+                }
+              
+            
         }
        
   
@@ -233,37 +266,47 @@
       
 
 
-        
-        
-        
-        & span {
+         span{
           display: flex;
-            width: 10%;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding-top: 15px;
-          padding-left: 10px;
-          margin: 0%;
+          flex-direction: row;
+          width: 10%;
+          align-items: end;
+          justify-content: end;
+          text-align: end;
+          padding-bottom: 20px;
+          padding-left: 20px;
+          margin-left: 20px;
+          font-size: 16px;
           border-radius: 0 15px 15px 0;
-          transform: translate(20px);
-          transition: all 0.3s;
+         
+          /*transform: scaleX(1);
+          transition: transform 0.5s ease-in-out;
+         overflow: visible;*/
          }
+
+          
+         
           
         
   
-        & .check {
+        &   .check {
           width: 2%;
           text-align: center;
           justify-content: center;
           align-items: center;
-         padding-left: 20px;
+          padding-left: 20px;
           padding-right: 25px;
-          margin-right: 10px;
-          
+          padding-top: 25px;
+         /* margin-top: 10px;*/
+          /*margin-left: 40px;*/
           background-color: #99E2D0;
-          visibility: hidden;
+          transform-origin: 100% 50%;
+          transform: scaleX(0);
+          transition: transform 0.7s ease-in-out;
+          /*visibility: hidden;*/
         }
+
+        
   
         & .fa-circle-check {
           justify-content: center;
@@ -274,24 +317,7 @@
       
       
 
-      &  h3{
-        font-size: 16px;
-        width:100%;
-
-      }
       
-      & h3 {
-        margin-bottom: 0%;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-  
-        @include breakpoint(small) {
-         /* text-overflow: clip;*/
-          white-space: nowrap;
-          overflow: visible;
-        }
-      }
     }
   
   
@@ -357,13 +383,20 @@
         font-size: large;
         margin-left: 70px;
       }
+
+      .menus{
+        width: 100%;
+        
+      }
   
       & span {
+        width: 10%;
         align-items: flex-end;
         text-align: end;
         justify-content: left;
-        padding-left: 180px;
-        padding-top: 45px;
+        padding-left: 0px;
+        padding-top: 30px;
+        padding-bottom: 0%;
         margin: 0%;
   
   
@@ -376,9 +409,9 @@
         padding-left: 30px;
       }
   
-      & .cards-texte {
+     /* & .cards-texte {
         margin-left: 30px;
-      }
+      }*/
   
      
     
@@ -446,6 +479,7 @@
         font-size: large;
         margin-left: 0%;
         padding-left: 0%;
+        padding-bottom: 0%;
       }
   
       & span {
@@ -453,8 +487,9 @@
         text-align: end;
         justify-content: left;
         padding-left: 100px;
-        padding-top: 45px;
+        padding-top: 0px;
         margin: 0%;
+        padding-bottom: 0%;
        
   
         & .check {
@@ -466,6 +501,7 @@
         /*margin-left: 150px;*/
         padding-left: 10px;
         width: 100%;
+        
       }
   
       & .cards-texte{
@@ -540,7 +576,7 @@
         text-align: end;
         justify-content: left;
         padding-left: 180px;
-        padding-top: 45px;
+        padding-top: 0px;
         margin: 0%;
   
   
