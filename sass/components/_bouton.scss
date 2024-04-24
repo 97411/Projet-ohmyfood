@@ -42,7 +42,7 @@
   }
 
   &:hover {
-    background: linear-gradient(#ff79da, #9356dc 75%);
+    @include gradient();
     opacity: 0.6;
   }
 
